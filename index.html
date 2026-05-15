@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>刘正一 · 风景园林作品集</title>
+    <meta
+      name="description"
+      content="北京林业大学园林学院风景园林专业 · 个人作品集与简介。"
+    >
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23101111"/><text x="8" y="44" font-family="Arial" font-size="24" font-weight="700" fill="%23c8d2c4">AX</text></svg>'>
+    <link rel="stylesheet" href="styles.css?v=22">
+  </head>
+  <body>
+    <main id="app" class="site" aria-live="polite">
+      <div class="grain" aria-hidden="true"></div>
+
+      <nav class="chrome" aria-label="Primary">
+        <a id="brand-name" class="brand" href="#" data-action="home" aria-label="Back to projects">ME</a>
+        <div class="progress" aria-hidden="true">
+          <div id="progress-ticks" class="progress-ticks"></div>
+        </div>
+        <button id="about-toggle" class="text-link" type="button" aria-label="About me">ABOUT ME</button>
+      </nav>
+
+      <section id="home" class="home-view" aria-label="Projects">
+        <div id="home-preview" class="home-preview" aria-hidden="true">
+          <div class="home-preview-side home-preview-side-left" aria-hidden="true"></div>
+          <div class="home-preview-side home-preview-side-right" aria-hidden="true"></div>
+
+          <div id="home-preview-media" class="home-preview-media" aria-hidden="true"></div>
+
+          <div class="home-preview-copy">
+            <p id="home-preview-kicker"></p>
+            <div id="home-preview-title" class="home-preview-title" aria-label=""></div>
+          </div>
+
+          <div class="home-preview-meta">
+            <dl>
+              <div>
+                <dt>COMPLETED</dt>
+                <dd id="home-preview-date"></dd>
+              </div>
+              <div>
+                <dt>TYPE</dt>
+                <dd id="home-preview-type"></dd>
+              </div>
+              <div>
+                <dt>ROLE</dt>
+                <dd id="home-preview-role"></dd>
+              </div>
+              <div>
+                <dt>CLIENT</dt>
+                <dd id="home-preview-client"></dd>
+              </div>
+            </dl>
+            <button id="home-preview-explore" class="home-preview-explore text-link" type="button">EXPLORE</button>
+            <p id="home-preview-description"></p>
+          </div>
+        </div>
+
+        <div class="gallery-stage" aria-hidden="true">
+          <div id="gallery-track" class="gallery-track"></div>
+        </div>
+
+        <div class="home-meta">
+          <p id="home-meta-text">风景园林·北京林业大学<br>刘正一·作品集</p>
+        </div>
+
+        <div class="home-social">
+          <a id="social-email" href="mailto:zyliu10@bjfu.edu.cn">EMAIL：zyliu10@bjfu.edu.cn</a>
+          <a id="social-phone" href="tel:18959238103">TELEPHONE:18959238103</a>
+        </div>
+
+      </section>
+
+      <section id="project" class="project-view" aria-label="Selected project" aria-hidden="true">
+        <div class="project-copy">
+          <p id="project-kicker"></p>
+          <div id="project-title" class="project-title" aria-label=""></div>
+        </div>
+
+        <div class="project-media-shell">
+          <div id="project-media" class="project-media"></div>
+          <div class="image-nav" aria-label="Image navigation">
+            <button id="image-prev" class="image-nav-btn image-nav-prev" type="button" aria-label="Previous image">‹</button>
+            <button id="image-next" class="image-nav-btn image-nav-next" type="button" aria-label="Next image">›</button>
+          </div>
+          <video
+            id="local-video"
+            class="local-video"
+            playsinline
+            controls
+            preload="metadata"
+          ></video>
+          <iframe
+            id="video-frame"
+            class="video-frame"
+            title="Project trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <button id="video-toggle" class="video-toggle" type="button" aria-label="Play video">
+            <span id="video-toggle-label">PLAY</span>
+          </button>
+          <div class="video-time">
+            <span id="video-current">00:00</span>
+            <span id="video-duration">00:00</span>
+          </div>
+        </div>
+
+        <div id="video-timeline" class="video-timeline" aria-label="Video timeline">
+          <div class="video-timeline-head">
+            <span>SMART TIMELINE</span>
+            <span id="video-timecode">00:00 / 00:00</span>
+          </div>
+          <div id="video-track" class="video-track" role="slider" aria-label="Video progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+            <div id="video-progress" class="video-progress"></div>
+            <div id="video-chapters" class="video-chapters"></div>
+          </div>
+        </div>
+
+        <aside id="chapter-panel" class="chapter-panel" aria-label="Smart chapter summary">
+          <p>SMART CHAPTER</p>
+          <h2 id="chapter-title"></h2>
+          <p id="chapter-summary"></p>
+          <ul id="chapter-points"></ul>
+        </aside>
+
+        <div id="project-rail" class="project-rail" aria-label="Project frames"></div>
+
+        <div class="project-meta">
+          <dl>
+            <div>
+              <dt>COMPLETED</dt>
+              <dd id="project-date"></dd>
+            </div>
+            <div>
+              <dt>TYPE</dt>
+              <dd id="project-type"></dd>
+            </div>
+            <div>
+              <dt>ROLE</dt>
+              <dd id="project-role"></dd>
+            </div>
+            <div>
+              <dt>CLIENT</dt>
+              <dd id="project-client"></dd>
+            </div>
+          </dl>
+          <a id="project-url" class="visit-site text-link" href="#" target="_blank" rel="noreferrer">VISIT SITE</a>
+          <p id="project-description"></p>
+        </div>
+
+        <button id="close-project" class="project-close text-link" type="button">PROJECTS</button>
+      </section>
+
+      <div id="fullscreen-viewer" class="fullscreen-viewer" aria-hidden="true">
+        <button id="fullscreen-close" class="fullscreen-close" type="button" aria-label="Close fullscreen">×</button>
+        <img id="fullscreen-image" class="fullscreen-image" alt="Project full preview">
+      </div>
+
+      <div id="title-burst" class="title-burst" aria-hidden="true">
+        <div id="burst-media" class="burst-media" aria-hidden="true"></div>
+        <div id="burst-title" class="burst-title"></div>
+      </div>
+
+      <aside id="about" class="about-view" aria-hidden="true" aria-label="个人简历">
+        <div class="about-inner">
+          <button type="button" id="about-home" class="about-home" aria-label="返回主页">
+            <svg class="about-home-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5Z"
+              />
+            </svg>
+          </button>
+          <div class="about-frame" aria-hidden="true"></div>
+
+          <header class="about-hero">
+            <div class="about-hero-main">
+              <p class="about-kicker">Profile · 简介</p>
+              <h2 class="about-name">
+                <span class="about-name-line">刘正一</span>
+              </h2>
+              <p class="about-role">Landscape Architecture · Beijing Forestry University</p>
+              <p class="about-role-cn">北京林业大学 · 园林学院 · 风景园林</p>
+            </div>
+            <dl class="about-contact">
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:zyliu10@bjfu.edu.cn">zyliu10@bjfu.edu.cn</a></dd>
+              </div>
+              <div>
+                <dt>Phone</dt>
+                <dd><a href="tel:18959238103">+86 189 5923 8103</a></dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>北京市海淀区清华东路 35 号</dd>
+              </div>
+              <div>
+                <dt>Origin</dt>
+                <dd>福建厦门 · Han</dd>
+              </div>
+              <div>
+                <dt>Born</dt>
+                <dd>2005.03.23</dd>
+              </div>
+            </dl>
+          </header>
+
+          <blockquote class="about-lede">
+            <p>
+              学习态度认真、执行力强；自大二起参与导师课题组科研与制图。关注风景园林与人工智能、参数化与
+              LoRA 生成等方向的结合，希望在设计与数字技术交叉的路径上持续深入。
+            </p>
+          </blockquote>
+
+          <div class="about-bento">
+            <section class="about-card about-card--identity" aria-labelledby="about-id-heading">
+              <h3 id="about-id-heading" class="about-card-title">Identity</h3>
+              <dl class="about-dl">
+                <div><dt>姓名</dt><dd>刘正一</dd></div>
+                <div><dt>性别</dt><dd>男</dd></div>
+                <div><dt>民族</dt><dd>汉族</dd></div>
+                <div><dt>政治面貌</dt><dd>共青团员</dd></div>
+              </dl>
+            </section>
+
+            <section class="about-card about-card--education" aria-labelledby="about-edu-heading">
+              <h3 id="about-edu-heading" class="about-card-title">Education</h3>
+              <p class="about-card-lead">北京林业大学园林学院 · 风景园林专业在读</p>
+              <ul class="about-metrics">
+                <li><span class="about-metrics-value">4 / 25</span><span class="about-metrics-label">专业排名</span></li>
+                <li><span class="about-metrics-value">3.82</span><span class="about-metrics-label">GPA / 4.0</span></li>
+                <li><span class="about-metrics-value">CET-6</span><span class="about-metrics-label">英语</span></li>
+              </ul>
+              <p class="about-card-text">
+                核心课程含风景园林设计、植物景观设计、中外园林史、生态学等，多门专业课程 90 分以上。
+              </p>
+            </section>
+
+            <section class="about-card about-card--honors" aria-labelledby="about-honors-heading">
+              <h3 id="about-honors-heading" class="about-card-title">Honors</h3>
+              <div class="about-honors-scroll" tabindex="0" aria-label="荣誉列表，可滚动">
+                <ul class="about-list about-list--ruled">
+                  <li>梁希校优秀学生一等奖学金</li>
+                  <li>梁希校优秀学生二等奖学金</li>
+                  <li>校学术优秀奖学金</li>
+                  <li>院十佳主持人</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="about-card about-card--tools" aria-labelledby="about-tools-heading">
+              <h3 id="about-tools-heading" class="about-card-title">Toolkit</h3>
+              <ul class="about-tags" aria-label="软件技能">
+                <li>Ps</li>
+                <li>Su</li>
+                <li>Rhino</li>
+                <li>GH</li>
+                <li>Id</li>
+                <li>Lumion</li>
+                <li>D5</li>
+                <li>CAD</li>
+                <li>Ai</li>
+                <li>PDF</li>
+              </ul>
+            </section>
+
+            <section class="about-card about-card--research" aria-labelledby="about-exp-heading">
+              <h3 id="about-exp-heading" class="about-card-title">Research &amp; Competition</h3>
+              <ul class="about-list about-list--ruled">
+                <li>北京市大创项目 · 负责人 · 2024.02 – 2025.12</li>
+                <li>全国会议论文汇报 · 2024.11 – 2025.06</li>
+                <li>国际会议论文工作 · 2024.02 – 2025.11</li>
+                <li>校级大创 · 核心成员 · 2024.02 – 2025.01</li>
+                <li>城市公园生态系统服务、园林史知识图谱、AI 生成景观等课题参与</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="script.js?v=73"></script>
+  </body>
+</html>
